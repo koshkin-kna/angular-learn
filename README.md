@@ -1,5 +1,9 @@
 # Kassa
 
+git remote add origin https://github.com/koshkin-kna/angular-learn.git
+git push -u origin master
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
 ## Development server

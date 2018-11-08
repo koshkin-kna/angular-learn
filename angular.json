@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              // "node_modules/ng-dialog/js/ngDialog.min.js"
+            ]
           },
           "configurations": {
             "production": {
