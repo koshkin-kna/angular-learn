@@ -1,3 +1,33 @@
-<div class="container" *ngIf="modalOpen">
-  modal open - {{ modalOpen }}
+<div *ngIf="isOpen">
+  <div class="modal__overlay"></div>
+  <div class="modal__wrapper">
+    <div class="modal__main">
+      <div class="modal__form">
+        <div class="form__group">
+          <label class="label">Штрихкод</label>
+          <input class="input" type="text" placeholder="0000000000" [(ngModel)]="barcode">
+        </div>
+        <div class="form__group">
+          <button class="btn btn-shtrih" (click)="searchByBarcode()">Заполнить по штрихкоду</button>
+        </div>
+        <div class="form__group">
+          <button class="btn btn-search">Искать товар</button>
+        </div>
+        <div class="find-product" *ngIf="productIsFind">
+          <div class="form__group">
+            <label class="label">Наименование</label>
+            <input class="input" type="text" placeholder="Толстовка Crop" readonly>
+          </div>
+          <div class="form__group">
+            <label class="label">Цена</label>
+            <input class="input" type="number" placeholder="123">
+          </div>
+        </div>
+        <br><br><br><br><br><br>
+        <button class="btn btn-danger" (click)="addProductService.toggle()">Отменить</button>
+      </div>
+
+    </div>
+  </div>
+
 </div>

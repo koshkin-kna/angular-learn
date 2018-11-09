@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { AddProductService } from './addproduct/addproduct.service';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  modalAddProductShow = false;
   title = 'kassa';
 
-  clickTest() {
-    this.modalAddProductShow = !this.modalAddProductShow;
+  constructor(
+    private addProductService: AddProductService
+  ) {
   }
+  /*
+  @HostListener('click')
+  click() {
+    this.addProductService.toggle();
+  }
+  */
 
 }

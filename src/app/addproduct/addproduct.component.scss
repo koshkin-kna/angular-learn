@@ -1,0 +1,92 @@
+.modal__wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backface-visibility: hidden;
+  padding: 10px 10px 0;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal__main {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 500px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 35px;
+  transform: translateZ(0);
+  color: #2b2e38;
+  background: #fff;
+  position: relative;
+  text-align: left;
+  outline: none;
+  text-size-adjust: 100%;
+}
+
+.modal__overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  background-color: rgba(0, 14, 30, .9);
+  backface-visibility: hidden;
+}
+
+.form__group {
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+.modal__form {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input {
+  height: 48px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.find-product {
+  padding-top: 40px;
+}
+.btn {
+  width: 100%;
+  height: 46px;
+  cursor: pointer;
+}
+
+.btn-shtrih {
+  background-color: green;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}
+
+.btn-search {
+  background-color: #bebebe;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}

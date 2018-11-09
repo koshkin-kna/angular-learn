@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { ListproductComponent } from './listproduct/listproduct.component';
+import { AddProductService } from './addproduct/addproduct.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,13 @@ import { ListproductComponent } from './listproduct/listproduct.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    AddProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
