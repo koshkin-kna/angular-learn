@@ -22,8 +22,15 @@ export class AddproductComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.addProductService.change.subscribe(isOpen => {
+    /* this.addProductService.change.subscribe(isOpen => {
       this.isOpen = isOpen;
+      console.log('23');
+    }); */
+    this.addProductService.isOpen.subscribe(isOpen => {
+      this.isOpen = isOpen;
+      if (!this.isOpen) {
+        this.barcode = '';
+      }
     });
   }
 
