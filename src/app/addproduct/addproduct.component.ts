@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { AddProductService } from './addproduct.service';
 
@@ -12,7 +12,7 @@ import { AddProductService } from './addproduct.service';
 export class AddproductComponent implements OnInit {
   //  this.renderer.addClass(document.body, 'modal-open');
   isOpen = false;
-  productIsFind = true;
+  productIsFind = false;
   barcode = '';
 
   constructor(
@@ -22,10 +22,6 @@ export class AddproductComponent implements OnInit {
   }
 
   ngOnInit() {
-    /* this.addProductService.change.subscribe(isOpen => {
-      this.isOpen = isOpen;
-      console.log('23');
-    }); */
     this.addProductService.isOpen.subscribe(isOpen => {
       this.isOpen = isOpen;
       if (!this.isOpen) {
@@ -37,4 +33,5 @@ export class AddproductComponent implements OnInit {
   searchByBarcode() {
     console.log(this.barcode);
   }
+
 }

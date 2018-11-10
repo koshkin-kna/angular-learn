@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { AddProductService } from './addproduct/addproduct.service';
 
 @Component({
@@ -13,11 +13,5 @@ export class AppComponent {
     private addProductService: AddProductService
   ) {
   }
-  /*
-  @HostListener('click')
-  click() {
-    this.addProductService.toggle();
-  }
-  */
 
 }

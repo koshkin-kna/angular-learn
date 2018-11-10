@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-// import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject, fromEvent } from 'rxjs';
+
 
 @Injectable()
 export class AddProductService {
-
-  // isOpen = BehaviorSubject<boolean>;
   isOpen: BehaviorSubject<boolean>;
+  subscription;
 
-  // @Output() change: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {
     this.isOpen = new BehaviorSubject(false);
   }
 
   toggle() {
-    // this.isOpen = !this.isOpen;
-    // this.change.emit(this.isOpen);
     this.isOpen.next(!this.isOpen.getValue());
+    if (this.isOpen.getValue()) {
+      this.subscription = fromEvent(document, 'keydown').subscribe(e => {
+        if (e['key'] === 'Escape') {
+          this.toggle();
+        }
+      });
+    } else {
+      this.subscription.unsubscribe();
+    }
   }
+
 
 }
