@@ -27,8 +27,8 @@ import { InMemoryDataService } from './api/in-memory-data.service';
     HttpClientModule,
     FormsModule,
     HttpClientModule,
+    // Следующая строка реализует fake api, убрать на проде
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false}),
-    // ReactiveFormsModule,
   ],
   providers: [
     AddProductService

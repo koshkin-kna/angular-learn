@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 
 
 export class AddproductComponent implements OnInit {
-  //  this.renderer.addClass(document.body, 'modal-open');
   isOpen = false;
   productIsFind = false;
   barcode: string;
@@ -32,6 +31,13 @@ export class AddproductComponent implements OnInit {
       this.isOpen = isOpen;
       if (!this.isOpen) {
         this.barcode = '';
+        this.renderer.removeStyle(document.documentElement, 'overflow');
+        this.renderer.removeStyle(document.documentElement, 'touch-action');
+        this.renderer.removeStyle(document.documentElement, '-ms-touch-action');
+      } else {
+        this.renderer.setStyle(document.documentElement, 'overflow', 'hidden');
+        this.renderer.setStyle(document.documentElement, 'touch-action', 'none');
+        this.renderer.setStyle(document.documentElement, '-ms-touch-action', 'none');
       }
     });
   }
@@ -41,16 +47,24 @@ export class AddproductComponent implements OnInit {
   }
 
   searchByBarcode() {
-    /*this.http.get('https://api.github.com/users/' + this.barcode)
-      .subscribe((response) => {
-        this.response = response;
-        console.log(this.response);
-      });
+    this.getProduct().subscribe(product => {
+      this.product = product;
+      console.log(this.product);
+    });
+    /*
+    this.http.get('https://api.github.com/users/' + this.barcode)
+      .subscribe(
+        (response) => {
+          console.log('5');
+          this.response = response;
+          console.log(this.response);
+        },
+        error => {
+          console.log('6');
+          console.log(error);
+        },
+      );
       */
-    // console.log(this.barcode);
-    console.log('ye serach');
-    this.getProduct().subscribe(product => this.product = product);
-    console.log(this.product);
   }
 
   searchProductModal() {
