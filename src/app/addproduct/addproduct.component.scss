@@ -97,7 +97,7 @@
   }
 }
 
-.btn-shtrih.disabled {
+.btn-shtrih:disabled {
   background-color: #bebebe;
   cursor: default;
 }
@@ -138,7 +138,9 @@
   }
 }
 
-
+.input-barcode.ng-valid {
+  border-color: green;
+}
 .input-barcode.warning {
   border-color: #a94442;
 

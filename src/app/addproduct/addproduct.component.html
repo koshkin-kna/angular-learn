@@ -5,7 +5,8 @@
       <form class="modal__form">
         <div class="form__group">
           <label class="label ">Штрихкод</label>
-          <input [ngClass]="{'warning': test.errors?.pattern || test.errors?.minlength}" name="barcode"
+          <input [ngClass]="{'warning': test.errors?.pattern || test.errors?.minlength}"
+                 name="barcode"
                  class="input input-barcode" type="text"
                  placeholder="0000000000"
                  [(ngModel)]="barcode"
@@ -13,9 +14,9 @@
                  pattern="[0-9]*"
                  required
                  minlength="8"
-                 maxlength="8">
+                 maxlength="8"
+                 autocomplete="off">
         </div>
-        <!--  && (test.dirty || test.touched) -->
         <div class="input-warning-wrap">
           <div class="input-warning" *ngIf="test.errors?.pattern">
             Штрихкод должен состоять только из цифр
@@ -27,10 +28,10 @@
 
 
         <div class="form__group">
-          <button [ngClass]="{'disabled': test.errors}" class="btn btn-shtrih" (click)="searchByBarcode()">Заполнить по штрихкоду</button>
+          <button [disabled]="test.errors" class="btn btn-shtrih" (click)="searchByBarcode()">Заполнить по штрихкоду</button>
         </div>
         <div class="form__group">
-          <button class="btn btn-search">Искать товар</button>
+          <button (click)="searchProductModal()" class="btn btn-search">Искать товар</button>
         </div>
         <div class="find-product" *ngIf="productIsFind">
           <div class="form__group">
