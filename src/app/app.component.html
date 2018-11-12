@@ -4,7 +4,7 @@
     <app-listproduct></app-listproduct>
     <br><br><br><br><br><br>
   </div>
-  <app-addproduct></app-addproduct>
+  <app-addproduct *ngIf="addProductService.isOpen.getValue()"></app-addproduct>
 </div>
 
 
