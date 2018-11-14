@@ -47,11 +47,25 @@ export class AddproductComponent implements OnInit {
   }
 
   searchByBarcode() {
-    this.getProduct().subscribe(product => {
-      this.product = product;
-      console.log(this.product);
-    });
-    /*
+    this.getProduct().subscribe(
+      (response) => {
+        this.product = response;
+        console.log(this.product);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  searchProductModal() {
+    alert('Возможность в поиска товара в разработке. Добавляйте товар по штрихкоду!');
+  }
+
+}
+
+
+/*
     this.http.get('https://api.github.com/users/' + this.barcode)
       .subscribe(
         (response) => {
@@ -65,10 +79,3 @@ export class AddproductComponent implements OnInit {
         },
       );
       */
-  }
-
-  searchProductModal() {
-    alert('Возможность в поиска товара в разработке. Добавляйте товар по штрихкоду!');
-  }
-
-}

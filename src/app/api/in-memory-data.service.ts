@@ -6,12 +6,8 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const product = [
-      {barcode: '12345678', title: 'Товар 1'},
-      {barcode: '11111111', title: 'Товар 2'},
-      {barcode: '22222222', title: 'Товар 3'},
-      {barcode: '33333333', title: 'Товар 4'}
-    ];
+    const product = {barcode: '12345678', title: 'Товар 1'};
+
     return { product };
   }
 

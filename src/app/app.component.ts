@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'kassa';
 
   constructor(
-    private addProductService: AddProductService
+    public addProductService: AddProductService
   ) {
   }
 
