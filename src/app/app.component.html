@@ -1,15 +1,1 @@
-<div class="body">
-  <div class="container">
-    <button class="btn" (click)="addProductService.toggle()">Добавить товар</button>
-    <app-listproduct></app-listproduct>
-    <br><br><br><br><br><br>
-  </div>
-  <app-addproduct *ngIf="addProductService.isOpen.getValue()"></app-addproduct>
-</div>
-
-
-<!--
-<app-addproduct *ngIf="modalAddProductShow"></app-addproduct>
- <router-outlet></router-outlet>
- -->
-
+<router-outlet></router-outlet>

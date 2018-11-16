@@ -1,0 +1,23 @@
+<div class="body">
+  <div class="body-bc"></div>
+  <div class="container">
+    <form>
+      <div class="logo">
+        <img src="/assets/logo.png" alt="Логотип Zen Wear">
+      </div>
+      <div class="logo-title">Войти в онлайн-кассу</div>
+      <div class="form__group">
+        <label class="form__label">Логин</label>
+        <input type="text" name="login" class="form__input" required>
+      </div>
+      <div class="form__group">
+        <label class="form__label">Пароль</label>
+        <input type="password" name="password" class="form__input" required>
+      </div>
+      <div class="form__group-btn">
+
+        <button [routerLink]="['/', 'sale']">Войти</button>
+      </div>
+    </form>
+  </div>
+</div>

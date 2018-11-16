@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AddProductService } from './addproduct/addproduct.service';
+// import { AddProductService } from './addproduct/addproduct.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,10 @@ import { AddProductService } from './addproduct/addproduct.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'kassa';
+  // title = 'kassa';
 
   constructor(
-    public addProductService: AddProductService
+    // public addProductService: AddProductService
   ) {
   }
 

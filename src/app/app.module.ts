@@ -7,21 +7,21 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { AddproductComponent } from './addproduct/addproduct.component';
-import { ListproductComponent } from './listproduct/listproduct.component';
-import { AddProductService } from './addproduct/addproduct.service';
 
 import { InMemoryDataService } from './api/in-memory-data.service';
+import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
+import { SaleModule } from './sale/sale.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    AddproductComponent,
-    ListproductComponent
+    LoginComponent,
   ],
   imports: [
+    LoginModule,
+    SaleModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -31,7 +31,7 @@ import { InMemoryDataService } from './api/in-memory-data.service';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false}),
   ],
   providers: [
-    AddProductService
+    // AddProductService
   ],
   bootstrap: [AppComponent]
 })

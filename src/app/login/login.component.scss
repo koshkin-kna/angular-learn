@@ -1,0 +1,159 @@
+.body {
+  background-color: #222;
+  min-height: 100vh;
+ // text-align: center;
+  display: flex;
+ align-items: center;
+  justify-content: center;
+}
+.body-bc {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+ // background-image: url(https://yastatic.net/passport-frontend/_/DAs5CEEEKZ_ZJz2RHsv0qZO0-FY.jpg);
+  background-image: url(/assets/bc.jpg);
+}
+
+
+
+.container {
+  margin: 70px 0;
+  position: relative;
+  text-align: left;
+  background-color: #fff;
+  width: 370px;
+  padding: 20px 46px;
+  max-width: 100%;
+  color: #000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+
+
+.logo {
+  text-align: center;
+  margin-bottom: 8px;
+  img {
+    width: 190px;
+  }
+}
+.logo-title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.form__group-btn {
+  margin-bottom: 28px;
+  text-align: center;
+  button {
+    width: 150px;
+    height:52px;
+    border: 1px solid #000;
+    color: #000;
+    box-shadow: none;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background .1s ease-in-out, color .1s ease-in-out;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.form__input, .form__textarea {
+  width: 100%;
+  height: 60px;
+  // border: 1px solid #c0c0c0;
+  font-size: 15px;
+  padding: 15px 0 0 0;
+  border: none;
+  background-color: #eceff1;
+  border-bottom: 2px solid transparent;
+  transition: border .2s ease-in-out, padding .2s ease-in-out, background .2s ease-in-out;
+  border-radius: 0;
+}
+
+
+.form__label {
+  position: absolute;
+  left: 20px;
+  top: 23px;
+  color: #777;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  pointer-events: none;
+  transition: all .2s ease-in-out;
+}
+.form__label-custom {
+  font-weight: 400;
+  font-style: italic;
+  //font-size: 13px;
+  color: #aaaaaa;
+}
+
+.form__group.is-focus, .form_group:focus {
+  .form__label {
+    transform: translateY(-16px);
+    font-size: 13px;
+    color: #aaaaaa;
+    left: 0;
+  }
+  .form__input, .form__textarea {
+    background-color: transparent;
+    border-bottom: 2px solid red;
+  }
+}
+
+.form__group.is-value {
+  .form__label {
+    transform: translateY(-16px);
+    font-size: 13px;
+    color: #aaaaaa;
+    left: 0;
+  }
+  .form__input, .form__textarea {
+    background-color: transparent;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.9);
+  }
+}
+.form__group.is-placeholder {
+  .form__label {
+    transform: translateY(-16px);
+    font-size: 13px;
+    color: #aaaaaa;
+    left: 20px;
+  }
+  .form__input, .form__textarea  {
+    padding-left: 20px;
+  }
+}
+.form__group.is-placeholder.is-focus, .form__group.is-placeholder.is-value {
+  .form__label {
+
+    left: 0;
+  }
+  .form__input, .form__textarea  {
+    padding-left: 0;
+  }
+}
+.form__textarea {
+  //height: 140px;
+  padding-top: 26px;
+  resize: vertical;
+  padding-bottom: 10px;
+  overflow: hidden!important;
+}
