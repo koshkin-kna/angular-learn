@@ -1,6 +1,8 @@
 <div class="body">
   <div class="container">
-    <button class="btn">Добавить товар</button>
+    <button class="btn" (click)="service.toggle()">Добавить товар</button>
+
+
     <!--
 
     <button class="btn" (click)="addProductService.toggle()">Добавить товар</button>
@@ -14,4 +16,5 @@
    -->
 
 </div>
+<app-add-product *ngIf="service.isOpen.getValue()"></app-add-product>
 

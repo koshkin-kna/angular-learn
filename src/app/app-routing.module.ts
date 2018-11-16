@@ -19,7 +19,7 @@ const routes: Routes = [
   // {path: 'sale',  loadChildren: './sale/sale.module#SaleModule'},
   // {path: '**', component: LoginComponent}
   {path: 'sale', component: MainComponent},
-  {path: '', component: LoginComponent}
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({
